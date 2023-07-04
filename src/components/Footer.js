@@ -16,10 +16,10 @@ const Footer = () => {
                         <div className="box-border border-b-4 border-blue-900 p-8 bg-gray-200 text-gray-600 text-center rounded-lg xl:w-80 mx-auto">
                             <h3 className="font-bold text-4xl mb-4">Compliance Easy</h3>
                             <div className='text-md font-medium text-gray-600'>
-                                <h5>Address:</h5>
-                                <p>Sector-9</p>
-                                <p>Dwarka</p>
-                                <p>New-Delhi</p>
+                                <h5>Office Address:</h5>
+                                <p>263, 2nd Floor,</p>
+                                <p>Vardhman Crown Mall</p>
+                                <p>Sector-19, Dwraka, Delhi-110075</p>
                             </div>
                         </div>
                     </div>

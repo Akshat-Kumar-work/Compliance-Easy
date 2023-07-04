@@ -181,7 +181,7 @@ const Contact = () => {
                                     </div>
                                     <div className="flex flex-col">
                                         <h2 className="text-2xl">Office Address</h2>
-                                        <p className="text-gray-400">Dwarka, sector-9, New Delhi</p>
+                                        <p className="text-gray-400">263, 2nd Floor, Vardhman Crown Mall, Sector-19, Dwraka, Delhi-110075</p>
                                     </div>
                                 </div>
                     
