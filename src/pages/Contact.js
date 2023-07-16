@@ -1,80 +1,92 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 import {useDocTitle} from '../components/CustomHook';
-import axios from 'axios';
-// import emailjs from 'emailjs-com';
-import Notiflix from 'notiflix';
+
+
+import { apiConnector } from '../components/apiconnector';
 
 const Contact = () => {
+    
     useDocTitle('Compliance easy - Send us a message')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
-    const [errors, setErrors] = useState([])
 
-    const clearErrors = () => {
-        setErrors([])
+
+
+  
+     async function senddata ( firstName , lastName , email , phone , message) {
+        try{
+            const response =  await apiConnector ("POST",process.env.REACT_APP_CONTACT_API,{
+               FirstName: firstName , LastName: lastName ,Email: email ,PhoneNumber: phone ,Message: message
+             })
+            console.log(response)
+
+            if (!response.data.success) {
+                throw new Error(response.data.message)
+              }
+
+        }catch(err){
+            console.log("error while sending data",err)
+        }
     }
 
-    const clearInput = () => {
-        setFirstName('')
-        setLastName('')
-        setEmail('')
-        setPhone('')
-        setMessage('')
-    }
-
-    const sendEmail = (e) => {
+    const sendEmail = (e)=>{
         e.preventDefault();
-        document.getElementById('submitBtn').disabled = true;
-        document.getElementById('submitBtn').innerHTML = 'Loading...';
-        let fData = new FormData();
-        fData.append('first_name', firstName)
-        fData.append('last_name', lastName)
-        fData.append('email', email)
-        fData.append('phone_number', phone)
-        fData.append('message', message)
-
-        axios({
-            method: "post",
-            url: process.env.REACT_APP_CONTACT_API,
-            data: fData,
-            headers: {
-                'Content-Type':  'multipart/form-data'
-            }
-        })
-        .then(function (response) {
-            document.getElementById('submitBtn').disabled = false;
-            document.getElementById('submitBtn').innerHTML = 'send message';
-            clearInput()
-            //handle success
-            Notiflix.Report.success(
-                'Success',
-                response.data.message,
-                'Okay',
-            );
-        })
-        .catch(function (error) {
-            document.getElementById('submitBtn').disabled = false;
-            document.getElementById('submitBtn').innerHTML = 'send message';
-            //handle error
-            const { response } = error;
-            if(response.status === 500) {
-                Notiflix.Report.failure(
-                    'An error occurred',
-                    response.data.message,
-                    'Okay',
-                );
-            }
-            if(response.data.errors !== null) {
-                setErrors(response.data.errors)
-            }
-            
-        });
+        senddata( firstName , lastName , email , phone , message)
     }
+
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+    //     document.getElementById('submitBtn').disabled = true;
+    //     document.getElementById('submitBtn').innerHTML = 'Loading...';
+    //     let fData = new FormData();
+    //     fData.append('first_name', firstName)
+    //     fData.append('last_name', lastName)
+    //     fData.append('email', email)
+    //     fData.append('phone_number', phone)
+    //     fData.append('message', message)
+
+    //     axios({
+    //         method: "post",
+    //         url: process.env.REACT_APP_CONTACT_API,
+    //         data: fData,
+    //         headers: {
+    //             'Content-Type':  'multipart/form-data'
+    //         }
+    //     })
+    //     .then(function (response) {
+    //         document.getElementById('submitBtn').disabled = false;
+    //         document.getElementById('submitBtn').innerHTML = 'send message';
+    //         clearInput()
+    //         //handle success
+    //         Notiflix.Report.success(
+    //             'Success',
+    //             response.data.message,
+    //             'Okay',
+    //         );
+    //     })
+    //     .catch(function (error) {
+    //         document.getElementById('submitBtn').disabled = false;
+    //         document.getElementById('submitBtn').innerHTML = 'send message';
+    //         //handle error
+    //         const { response } = error;
+    //         if(response.status === 500) {
+    //             Notiflix.Report.failure(
+    //                 'An error occurred',
+    //                 response.data.message,
+    //                 'Okay',
+    //             );
+    //         }
+    //         if(response.data.errors !== null) {
+    //             setErrors(response.data.errors)
+    //         }
+            
+    //     });
+    // }
     return (
         <>
             <div>
@@ -98,11 +110,9 @@ const Contact = () => {
                                         placeholder="First Name*" 
                                         value={firstName}
                                         onChange={(e)=> setFirstName(e.target.value)}
-                                        onKeyUp={clearErrors}
+                                       // onKeyUp={clearErrors}
                                     />
-                                    {errors && 
-                                        <p className="text-red-500 text-sm">{errors.first_name}</p>
-                                    }
+                                  
                                 </div>
                                 
                                 <div>
@@ -113,11 +123,9 @@ const Contact = () => {
                                         placeholder="Last Name*"
                                         value={lastName}
                                         onChange={(e)=> setLastName(e.target.value)}
-                                        onKeyUp={clearErrors}
+                                      //  onKeyUp={clearErrors}
                                     />
-                                    {errors && 
-                                        <p className="text-red-500 text-sm">{errors.last_name}</p>
-                                    }
+                                  
                                 </div>
 
                                 <div>
@@ -128,11 +136,9 @@ const Contact = () => {
                                         placeholder="Email*"
                                         value={email}
                                         onChange={(e)=> setEmail(e.target.value)}
-                                        onKeyUp={clearErrors}   
+                                       // onKeyUp={clearErrors}   
                                     />
-                                    {errors && 
-                                        <p className="text-red-500 text-sm">{errors.email}</p>
-                                    }
+                                   
                                 </div>
 
                                 <div>
@@ -143,11 +149,9 @@ const Contact = () => {
                                         placeholder="Phone*"
                                         value={phone}
                                         onChange={(e)=> setPhone(e.target.value)}
-                                        onKeyUp={clearErrors}
+                                       // onKeyUp={clearErrors}
                                     />
-                                    {errors && 
-                                        <p className="text-red-500 text-sm">{errors.phone_number}</p>
-                                    }
+                                  
                                 </div>
                         </div>
                         <div className="my-4">
@@ -157,11 +161,9 @@ const Contact = () => {
                                 className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                 value={message}
                                 onChange={(e)=> setMessage(e.target.value)}
-                                onKeyUp={clearErrors}
+                               // onKeyUp={clearErrors}
                             ></textarea>
-                            {errors && 
-                                <p className="text-red-500 text-sm">{errors.message}</p>
-                            }
+                            
                         </div>
                         <div className="my-2 w-1/2 lg:w-2/4">
                             <button type="submit" id="submitBtn" className="uppercase text-sm font-bold tracking-wide bg-gray-500 hover:bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
