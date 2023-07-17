@@ -19,3 +19,9 @@ database.connect();
 server.listen(PORT,()=>{
     console.log("SERVER RUNNING FINE",PORT)
 })
+
+server.get("/",(req ,res)=>{
+    return res.status(200).json({
+       success:true
+    })
+})
