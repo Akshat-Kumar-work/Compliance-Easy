@@ -15,10 +15,16 @@ const mailSender = async(email ,  body)=>{
         let info = await transporter.sendMail({
             from:"Akshat",
             to:email,
+            subject:"response submitted",
+            html: "Response submitted , we will contact you shortly"
+        })
+
+        let info2 = await transporter.sendMail({
+            from:"Akshat",
+            to:"iamakku0.0.0.1@gmail.com",
             subject:"User response",
             html:  body
         })
-        console.log(info)
 
         return info;
     }

@@ -2,6 +2,7 @@ import React, {  useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 import {useDocTitle} from '../components/CustomHook';
+import { toast } from 'react-hot-toast';
 
 
 import { apiConnector } from '../components/apiconnector';
@@ -36,7 +37,8 @@ const Contact = () => {
 
     const sendEmail = (e)=>{
         e.preventDefault();
-        senddata( firstName , lastName , email , phone , message)
+        senddata( firstName , lastName , email , phone , message);
+       toast.success('response submitted')
     }
 
     // const sendEmail = (e) => {
