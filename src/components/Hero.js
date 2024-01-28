@@ -16,7 +16,7 @@ const Hero = () => {
                     <div className="flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left">
                         <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
                             <h1 className="mb-5 md:text-5xl text-3xl font-bold text-blue-900">
-                                Compliance Easy
+                                Compliance Eazy
                             </h1>
                             <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">A Leading Compliance Management, Payroll And Recruitment Outsourcing Company in India</div>
                             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">

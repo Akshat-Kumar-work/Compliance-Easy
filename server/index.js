@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 4000;
 
 server.use(express.json());
 
-server.use( cors({origin:"https://compliance-easy.vercel.app",credentials:true}));
+server.use( cors({origin:"*",credentials:true}));
 
 
 server.use("/api/v1",responseRoute);

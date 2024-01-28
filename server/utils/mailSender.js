@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-const mailSender = async(email ,  body)=>{
+const mailSender = async(email ,  clientBody , compliancebody)=>{
     try{
         let transporter = nodemailer.createTransport({
             host:process.env.MAIL_HOST,
@@ -13,17 +13,17 @@ const mailSender = async(email ,  body)=>{
   
 
         let info = await transporter.sendMail({
-            from:"Akshat",
+            from:"Compliance Eazy",
             to:email,
             subject:"response submitted",
-            html: "Response submitted , we will contact you shortly"
+            html: clientBody
         })
 
         let info2 = await transporter.sendMail({
-            from:"Akshat",
+            from:"Client Query",
             to:"iamakku0.0.0.1@gmail.com",
             subject:"User response",
-            html:  body
+            html:  compliancebody
         })
 
         return info;
