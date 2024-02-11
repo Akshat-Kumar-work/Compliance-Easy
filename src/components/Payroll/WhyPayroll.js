@@ -15,11 +15,11 @@ const WhyPayroll = () => {
                         <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center">
                             <img alt="card img" className="rounded-t float-right" src="./WhyPayroll.png" />
                         </div>
-                        <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8" data-aos="zoom-in" data-aos-delay="500">
+                        <div className= " flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8" data-aos="zoom-in" data-aos-delay="500">
                             
-                            <h3 className="text-3xl  text-blue-900 font-bold">Why Payroll Compliance Services Are Essential For Your Business?</h3>
+                            <h3 className="text-3xl text-blue-900 font-bold">Why Payroll Compliance Services Are Essential For Your Business?</h3>
                             <br></br>
-                            
+                            <div className=''>
                             <div>
                                 <p className='my-3 text-l text-gray-600 flex gap-5 '>
                                     <div><FaCalendarCheck/></div>
@@ -50,6 +50,8 @@ const WhyPayroll = () => {
                                 <div><b>Avoiding Penalties:</b> Failure to comply with tax regulations and other payroll-related laws can result in hefty fines and penalties. Payroll compliance services help mitigate these risks by staying updated on regulatory changes and ensuring accurate filings.</div>
                                 </p>
                             </div>
+                            </div>
+                            
                             
                         </div>
                     </div>
@@ -58,7 +60,7 @@ const WhyPayroll = () => {
 
                     <div className="flex flex-col-reverse lg:flex-row py-0 justify-between lg:text-left" data-aos="fade-up">
                         
-                        <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8" data-aos="zoom-in" data-aos-delay="500">
+                        <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8 border-8" data-aos="zoom-in" data-aos-delay="500">
                             
                             <h3 className="text-3xl  text-blue-900 font-bold">What We Do</h3>
                             <br></br>
