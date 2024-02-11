@@ -104,6 +104,7 @@ const Services = () => {
                     </div>
             </section>
 
+<<<<<<< HEAD
             {/* <section>
                 <div className="m-auto max-w-6xl p-2 md:p-12 h-5/6">
                     <div className="flex flex-col-reverse lg:flex-row py-8 justify-between lg:text-left" data-aos="zoom-out">
@@ -131,6 +132,9 @@ const Services = () => {
                     </div>
                 </div>
             </section> */}
+=======
+            
+>>>>>>> 139dc3ee2dde2e6f01b5a9d249ed80e47b03803e
         </div>
     )
 }

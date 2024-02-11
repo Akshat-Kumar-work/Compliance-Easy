@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import img from '../images/Web-developer.svg';
+=======
+
+>>>>>>> 139dc3ee2dde2e6f01b5a9d249ed80e47b03803e
 import { Link } from 'react-router-dom';
 
 const Intro = () => {
