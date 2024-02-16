@@ -38,7 +38,13 @@ const Contact = () => {
     const sendEmail = (e)=>{
         e.preventDefault();
         senddata( firstName , lastName , email , phone , message);
-       toast.success('response submitted')
+        toast.success('response submitted')
+        setFirstName("");
+        setLastName("")
+        setEmail("");
+        setPhone("");
+        setMessage("");
+   
     }
 
     return (

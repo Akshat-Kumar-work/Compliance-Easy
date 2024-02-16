@@ -12,9 +12,10 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import DemoProduct from './pages/DemoProduct';
 
+import ScrollToTop from './components/ScrollToTop';
 
 import {useDocTitle} from './components/CustomHook';
-import ScrollToTop from './components/ScrollToTop';
+
 import PayrollProcessing from './pages/PayrollProcessing';
 import StatutoryCompliance from './pages/StatutoryCompliance';
 import OperationalCompliance from './pages/OperationalCompliance';
