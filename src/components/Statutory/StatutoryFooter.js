@@ -5,7 +5,7 @@ function StatutoryFooter() {
   return (
     <div id="" className="bg-gray-100 py-8" >
                 <div data-aos="zoom-in-down">
-                    <div className="my-4 py-2">
+                    <div className="my-4 py-2 border-black" >
                         <div>
                             <h2 className="my-4 text-center text-3xl text-blue-900 uppercase font-bold">Get in Touch for a Consultation!</h2>
                         </div>
