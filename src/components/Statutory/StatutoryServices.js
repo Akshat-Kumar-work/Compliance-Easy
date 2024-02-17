@@ -91,21 +91,7 @@ function StatutoryServices() {
                                     </p>
                                 </div>
                             </div> 
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 rounded-lg shadow-2xl p-3 group">
-                                <div className="m-2 text-justify text-sm">
-                                {/* <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src="Minimum wages.jpg" /> */}
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">The Employees’ State Insurance Act, 1948</h2>
-                                    <p className="text-md font-medium">
-                                    Compliance with The Employees’ State Insurance Act, 1948, is crucial. Our services ensure that your organization meets the requirements, providing employees with the benefits outlined in the Act.
-                                    </p>
-                                </div>
-                            </div> 
                             
-                            
-
-
-
-
                         </div>
                     </div>
             </section>
