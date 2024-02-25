@@ -6,7 +6,7 @@ function StatutoryIntro() {
   return (
             <>
 
-                <div id="services" className="bg-gray-100 py-12" >
+                <div id="services" className=" bg-inherit py-10" >
                 <div data-aos="zoom-in-down">
                     <div className="my-4 py-4">
                         <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">Ensuring Legal Integrity for Your Business</h2>
@@ -18,16 +18,17 @@ function StatutoryIntro() {
                     </div>
                 </div>
                 </div>
-                <div className=''>
+
+                <div className=' py-10'>
                 <div className="m-auto max-w-6xl p-2 md:p-5 h-5/6"  >
 
                     <div className="flex flex-col-reverse lg:flex-row py-0 justify-between lg:text-left" data-aos="fade-up">
                         <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center">
-                            <img alt="card img" className="rounded-t float-right" src="./WhyPayroll.png" />
+                            <img alt="card img" className="rounded-t float-right" src="../WhyStatutory.png" />
                         </div>
                         <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8" data-aos="zoom-in" data-aos-delay="500">
                             
-                            <h3 className="text-3xl  text-blue-900 font-bold">Why Choose Our Statutory Compliance Services?</h3>
+                            <h3 className="text-3xl  text-blue-900 font-bold uppercase">Why Choose Our Statutory Compliance Services?</h3>
                             <br></br>
                             
                             <div>

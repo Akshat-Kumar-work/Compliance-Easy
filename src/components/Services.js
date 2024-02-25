@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -16,7 +17,6 @@ const Services = () => {
     function operationalHandler(){
         navigate("/operational")
     }
-
 
     return (
         <div id="services" className="bg-gray-100 py-12" >
@@ -47,7 +47,7 @@ const Services = () => {
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group"
                                 onClick={StatutoryHandler}>
                                 <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src="Labour law consulting.webp" />
+                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src="operational_compliance.png" />
                                     <h2 className="font-semibold my-8 text-2xl text-center">Statutory Compliance</h2>
                                     {/* <p className="text-md font-medium">
                                     Our experienced consultants help you understand and navigate complex labour legislation, including employment contracts, workplace policies, employee rights, and dispute resolution..
@@ -58,7 +58,7 @@ const Services = () => {
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group"
                                 onClick={operationalHandler}>
                                 <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src="operational_compliance.png" />
+                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src="Labour law consulting.webp" />
                                     <h2 className="font-semibold my-8 text-2xl text-center ">Operational Compliance</h2>
                                     {/* <p className="text-md font-medium">
                                     From eligibility calculations to documentation and fund management, we assist in creating a seamless process for gratuity disbursement. With our in-depth knowledge and experience, we help you navigate the complexities of the Act, ensuring timely and accurate gratuity payments to deserving employees.

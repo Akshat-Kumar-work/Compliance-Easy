@@ -3,13 +3,11 @@ import { FaCalendarCheck } from "react-icons/fa";
 import { FaCheckDouble } from "react-icons/fa";
 
 
-
-import { Link } from 'react-router-dom';
-
 const WhyPayroll = () => {
     return (
         <div className=''>
                 <div className="m-auto max-w-6xl p-2 md:p-5 h-5/6" id='whyPayroll' >
+                <h3 className="text-3xl text-blue-900 text-center font-extrabold">Why Payroll Compliance Services Are Essential For Your Business?</h3>
 
                     <div className="flex flex-col-reverse lg:flex-row py-0 justify-between lg:text-left" data-aos="fade-up">
                         <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center">
@@ -17,7 +15,7 @@ const WhyPayroll = () => {
                         </div>
                         <div className= " flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8" data-aos="zoom-in" data-aos-delay="500">
                             
-                            <h3 className="text-3xl text-blue-900 font-bold">Why Payroll Compliance Services Are Essential For Your Business?</h3>
+                            
                             <br></br>
                             <div className=''>
                             <div>
@@ -60,11 +58,12 @@ const WhyPayroll = () => {
 
                     <div className="flex flex-col-reverse lg:flex-row py-0 justify-between lg:text-left" data-aos="fade-up">
                         
-                        <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8 border-8" data-aos="zoom-in" data-aos-delay="500">
+                        <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8 " data-aos="zoom-in" data-aos-delay="500">
                             
-                            <h3 className="text-3xl  text-blue-900 font-bold">What We Do</h3>
+                            <h3 className="text-3xl  text-blue-900 font-extrabold">What We Do</h3>
                             <br></br>
-                            
+
+                            <div className=' border-4 px-4 py-4'>
                             <div>
                                 <p className='my-3 text-l text-gray-600 flex gap-5 '>
                                     <div><FaCheckDouble/></div>
@@ -155,6 +154,9 @@ const WhyPayroll = () => {
                                     <div>Tech enablement of Payroll Compliance Tasks with a robust automation tool</div>
                                 </p>
                             </div>
+                            </div>
+                            
+                            
 
                             
                             

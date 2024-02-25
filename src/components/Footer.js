@@ -1,8 +1,24 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import {  useNavigate } from 'react-router-dom';
+
+
 
 const Footer = () => {
+
+    const navigate = useNavigate();
+
+    function PayrollHandler(){
+        navigate("/Payroll")
+    }
+    function StatutoryHandler() {
+        navigate("/statutory")
+    }
+    function operationalHandler(){
+        navigate("/operational")
+    }
+
     return (
         <>
             <footer>
@@ -49,19 +65,16 @@ const Footer = () => {
                         <h6 className="text-[#013289] text-xl font-bold mb-4">OUR SERVICES</h6>
                         <ul className="text-md">
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Payroll Processing</Link>
+                            <div className="text-[#013289] hover:text-gray-900 hover:cursor-pointer transition duration-250 ease-in-out"
+                            onClick={PayrollHandler}>Payroll Processing</div>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Labour Law Consulting</Link>
+                            <div  className="text-[#013289] hover:text-gray-900 hover:cursor-pointer  transition duration-250 ease-in-out"
+                            onClick={StatutoryHandler}>Statutory Compliance</div>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Employee State Insurance Act</Link>
-                        </li>
-                        <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Labour Welfare Fund</Link>
-                        </li>
-                        <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">EPF Act</Link>
+                            <div className="text-[#013289] hover:text-gray-900 hover:cursor-pointer  transition duration-250 ease-in-out"
+                            onClick={operationalHandler}>Operational Compliance</div>
                         </li>
                         
                         </ul>
